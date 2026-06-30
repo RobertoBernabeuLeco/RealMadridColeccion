@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camisetas Real Madrid</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Inventario</p>
+          <h1>Camisetas Real Madrid</h1>
+        </div>
+        <div class="actions" aria-label="Acciones">
+          <button class="secondary-button" id="exportButton" type="button">Exportar</button>
+          <button class="secondary-button" id="importButton" type="button">Importar</button>
+          <button class="secondary-button danger" id="resetButton" type="button">Restablecer</button>
+          <input id="importFile" type="file" accept="application/json,.json" hidden>
+        </div>
+      </header>
+
+      <section class="summary-grid" aria-label="Resumen">
+        <div class="summary-item">
+          <span class="summary-value" id="ownedCount">0</span>
+          <span class="summary-label">camisetas</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-value" id="seasonCount">0</span>
+          <span class="summary-label">temporadas</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-value" id="pendingCount">0</span>
+          <span class="summary-label">pendientes</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-value" id="missingCount">0</span>
+          <span class="summary-label">por comprar</span>
+        </div>
+      </section>
+
+      <main class="main-layout">
+        <section class="table-panel" aria-labelledby="tableTitle">
+          <div class="panel-header">
+            <div>
+              <h2 id="tableTitle">Temporadas</h2>
+              <p id="saveState" class="save-state">Guardado</p>
+            </div>
+            <label class="switch">
+              <input id="pendingOnly" type="checkbox">
+              <span>Solo pendientes</span>
+            </label>
+          </div>
+          <label class="search-label">
+            <span>Buscar</span>
+            <input id="searchInput" type="search" placeholder="Año, jugador, nota">
+          </label>
+          <div class="table-wrap">
+            <table aria-label="Inventario por temporada">
+              <thead>
+                <tr>
+                  <th>Temporada</th>
+                  <th>Local</th>
+                  <th>Visitante</th>
+                  <th>Tercera</th>
+                  <th>Pend.</th>
+                </tr>
+              </thead>
+              <tbody id="seasonRows"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="detail-panel" aria-live="polite">
+          <div class="detail-header">
+            <div>
+              <p class="eyebrow">Detalle</p>
+              <h2 id="detailTitle">Temporada</h2>
+            </div>
+            <div class="detail-total" id="detailTotal">0/3</div>
+          </div>
+          <div class="kit-grid" id="kitGrid"></div>
+          <div class="gallery-block">
+            <div class="panel-header compact">
+              <h3>Variantes del ZIP</h3>
+              <span id="galleryCount" class="gallery-count">0</span>
+            </div>
+            <div class="gallery-grid" id="galleryGrid"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="catalog.generated.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
