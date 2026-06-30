@@ -2079,14 +2079,27 @@
                                     "kind":  "home"
                                 },
                        "away":  null,
-                       "third":  null
+                       "third":  {
+                                     "file":  "tercera-camiseta-real-madrid-2026-27.jpg",
+                                     "src":  "assets/Camisetas Real Madrid/2026-27/tercera-camiseta-real-madrid-2026-27.jpg",
+                                     "title":  "Tercera Camiseta Real Madrid 2026 27",
+                                     "kind":  "third"
+                                 }
                    },
-        "gallery":  {
-                        "file":  "camiseta-local-real-madrid-2026-27.jpg",
-                        "src":  "assets/Camisetas Real Madrid/2026-27/camiseta-local-real-madrid-2026-27.jpg",
-                        "title":  "Camiseta Local Real Madrid 2026 27",
-                        "kind":  "home"
-                    }
+        "gallery":  [
+                        {
+                            "file":  "camiseta-local-real-madrid-2026-27.jpg",
+                            "src":  "assets/Camisetas Real Madrid/2026-27/camiseta-local-real-madrid-2026-27.jpg",
+                            "title":  "Camiseta Local Real Madrid 2026 27",
+                            "kind":  "home"
+                        },
+                        {
+                            "file":  "tercera-camiseta-real-madrid-2026-27.jpg",
+                            "src":  "assets/Camisetas Real Madrid/2026-27/tercera-camiseta-real-madrid-2026-27.jpg",
+                            "title":  "Tercera Camiseta Real Madrid 2026 27",
+                            "kind":  "third"
+                        }
+                    ]
     }
 ];
 
